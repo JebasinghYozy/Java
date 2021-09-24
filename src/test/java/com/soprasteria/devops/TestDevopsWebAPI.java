@@ -49,7 +49,7 @@ public class TestDevopsWebAPI {
 
 		System.out.println("response:::::: " + result.getResponse());
 
-		String expected = "{\"id\": \"2034\",\"projectName\": \"DEVOPS Accelerator\",\"companyName\": \"Yozy Technologies\"}";
+		String expected = "{\"id\": \"2034\",\"projectName\": \"DEVOPS Accelerator\",\"companyName\": \"Yozy Technologies LLP\"}";
 
 		JSONAssert.assertEquals(expected, result.getResponse().getContentAsString(), false);
 
