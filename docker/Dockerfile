@@ -6,6 +6,6 @@ EXPOSE 8080
 COPY devops-accelerator.war /devops-accelerator.war
 
 # run the app
-CMD ["/usr/bin/java", "-jar", "/devops-accelerator.war"]
+ENTRYPOINT ["/usr/bin/java", "-jar", "/devops-accelerator.war"]
 
 
