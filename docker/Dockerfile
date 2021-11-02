@@ -1,12 +1,10 @@
 FROM openjdk:8-jre-alpine
 
-EXPOSE 8080
-
+EXPOSE 8081
 # Copy war file
-ADD docker/devops-accelerator.war devops.accelerator.war
-# COPY devops-accelerator.war /devops-accelerator.war
+COPY devops-accelerator.war /devops-accelerator.war
 
 # run the app
-ENTRYPOINT ["/usr/bin/java", "-jar", "devops-accelerator.war"]
+CMD ["/usr/bin/java", "-jar", "/devops-accelerator.war"]
 
 
