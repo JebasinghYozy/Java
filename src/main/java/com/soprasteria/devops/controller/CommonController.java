@@ -18,5 +18,10 @@ public class CommonController {
 		
 		return new BaseObj("2033", "DEVOPS Accelerator", "Yozy Technologies LLP");
 	}
+	@GetMapping(value="/yozyme")
+	public BaseObj Aravind() {
+		
+		return new BaseObj("2031", "DEVOPS Accelerator", "Yozy Technologies");
+	}
 
 }
