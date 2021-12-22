@@ -51,24 +51,6 @@ public class TestDevopsWebAPI {
 
 		String expected = "{\"id\": \"2034\",\"projectName\": \"DEVOPS Accelerator\",\"companyName\": \"Yozy Technologies LLP India\"}";
 
-		JSONAssert.assertEquals(expected, result.getResponse().getContentAsString(), false);
-		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/hello-world/yozyme").accept(MediaType.APPLICATION_JSON);
-		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-
-		System.out.println("response:::::: " + result.getResponse());
-
-		String expected = "{\"id\": \"2033\",\"projectName\": \"DEVOPS Accelerator\",\"companyName\": \"Yozy Technologies LLP\"}";
-
-		JSONAssert.assertEquals(expected, result.getResponse().getContentAsString(), false);
-		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/yozyme").accept(MediaType.APPLICATION_JSON);
-		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-
-		System.out.println("response:::::: " + result.getResponse());
-
-		String expected = "{\"id\": \"2031\",\"projectName\": \"DEVOPS Accelerator\",\"companyName\": \"Yozy Technologies\"}";
-
-		JSONAssert.assertEquals(expected, result.getResponse().getContentAsString(), false);
-
 	}
 
 	@After
