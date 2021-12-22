@@ -35,6 +35,8 @@ public class TestDevopsWebAPI {
 	private MockMvc mockMvc;
 
 	BaseObj model = new BaseObj("2034", "DEVOPS Accelerator", "Yozy Technologies India");
+	BaseObj model = new BaseObj("2033", "DEVOPS Accelerator", "Yozy Technologies");
+
 
 	@Before
 	public void beforeMethod() {
@@ -50,6 +52,19 @@ public class TestDevopsWebAPI {
 		System.out.println("response:::::: " + result.getResponse());
 
 		String expected = "{\"id\": \"2034\",\"projectName\": \"DEVOPS Accelerator\",\"companyName\": \"Yozy Technologies LLP India\"}";
+
+		JSONAssert.assertEquals(expected, result.getResponse().getContentAsString(), false);
+
+	}
+	@Test
+	public void checkDetails() throws Exception {
+
+		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/hello-world/yozyme").accept(MediaType.APPLICATION_JSON);
+		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
+
+		System.out.println("response:::::: " + result.getResponse());
+
+		String expected = "{\"id\": \"2033\",\"projectName\": \"DEVOPS Accelerator\",\"companyName\": \"Yozy Technologies LLP\"}";
 
 		JSONAssert.assertEquals(expected, result.getResponse().getContentAsString(), false);
 
