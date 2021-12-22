@@ -57,7 +57,7 @@ public class TestDevopsWebAPI {
 
 	}
 	@Test
-	public void checkDetails() throws Exception {
+	public void Details() throws Exception {
 
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/hello-world/yozyme").accept(MediaType.APPLICATION_JSON);
 		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
